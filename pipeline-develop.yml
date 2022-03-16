@@ -2,7 +2,7 @@ trigger:
 - master
 
 pool:
- vmImage: windows-latest
+ vmImage: 'windows-latest'
 
 steps:
 - script: pwd
@@ -13,6 +13,6 @@ steps:
 
 - script: dotnet build
   displayName: 'Budowanie app'
-  workingDirectory: '$(solutionDir)'
+  workingDirectory: 'webappWithTests/Application/aspnet-core-dotnet-core'
 
 # - script: dotnet publish -o 
