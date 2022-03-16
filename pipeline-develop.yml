@@ -2,27 +2,17 @@ trigger:
 - master
 
 pool:
-  vmImage: 'windows-latest'
-
-variables:
-  solution: '**/*.sln'
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
+ vmImage: windows.latest
 
 steps:
-- task: DotNetCoreCLI@2
-  displayName: 'Publikwanie app'
-  inputs:
-    command: 'publish'
-    publishWebProjects: false
-    projects: 'webappWithTests/Application/aspnet-core-dotnet-core/aspnet-core-dotnet-core.csproj'
-    arguments: '--configuration Release -o $(System.DefaultWorkingDirectory)/pipeline'
+- script: pwd
+  displayname: 'Gdzie jestesmy ?'
 
-- task: AzureRmWebAppDeployment@4
-  displayName: 'Przesylanei do Azure'
-  inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'Azure subscription 1(4eb40c76-f45b-4d01-a668-19892bd67f3e)'
-    appType: 'webApp'
-    WebAppName: 'MS-Sample-dotnet'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/pipeline/*.zip'
+- script: dir
+  displayName: 'Co jest w folderze?'
+
+- script: dotnet build
+  displayName: 'Budowanie app'
+  workingDirectory: '$(solutionDir)'
+
+# - script: dotnet publish -o 
