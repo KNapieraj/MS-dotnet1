@@ -6,7 +6,7 @@ pool:
 
 steps:
 - script: pwd
-  displayname: 'Gdzie jestesmy ?'
+  displayName: 'Gdzie jestesmy ?'
 
 - script: dir
   displayName: 'Co jest w folderze?'
