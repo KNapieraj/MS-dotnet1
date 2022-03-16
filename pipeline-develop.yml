@@ -1,7 +1,7 @@
 trigger:
 - master
 
-varaibles:
+variables:
   solutionDir: 'webappWithTests/Application/aspnet-core-dotnet-core'
 
 pool:
