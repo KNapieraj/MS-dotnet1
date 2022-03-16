@@ -1,6 +1,9 @@
 trigger:
 - master
 
+varaibles:
+  solutionDir: 'webappWithTests/Application/aspnet-core-dotnet-core'
+
 pool:
  vmImage: 'windows-latest'
 
@@ -13,6 +16,6 @@ steps:
 
 - script: dotnet build
   displayName: 'Budowanie app'
-  workingDirectory: 'webappWithTests/Application/aspnet-core-dotnet-core'
+  workingDirectory: $(solutionDir)
 
 # - script: dotnet publish -o 
