@@ -31,3 +31,5 @@ steps:
     targetPath: '$(build.artifactStagingDirectory)'
     artifact: 'drop'
     publishLocation: 'pipeline'
+
+# komentarz na probe
