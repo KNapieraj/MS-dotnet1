@@ -1,5 +1,7 @@
 trigger:
-- master
+  branches:
+    include:
+      - master
 
 variables:
   solutionDir: 'webappWithTests/Application/aspnet-core-dotnet-core'
