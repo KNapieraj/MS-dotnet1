@@ -22,7 +22,7 @@ steps:
 
 - script: dotnet publish -o $(build.artifactStagingDirectory)
   displayName: 'Tworzenie i publikowanie -o $(build.artifactStagingDirectory)'
-  workingDirectory: $'solutionDir'
+  workingDirectory: $(solutionDir)
 
 - task: PublishPipelineArtifact@1
   displayName: 'Publikowanie pliku zip'
