@@ -20,4 +20,12 @@ steps:
   displayName: 'Budowanie app'
   workingDirectory: $(solutionDir)
 
-# - script: dotnet publish -o 
+- script: dotnet publish -o $(build.artifactStagingDirectory)
+  displayName: 'Publikowanie -o $(build.artifactStagingDirectory)'
+  workingDirectory: $'solutionDir'
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '@(Pipeline.Workspace)'
+    artifact: 'drop'
+    publishLocation: 'pipeline'
