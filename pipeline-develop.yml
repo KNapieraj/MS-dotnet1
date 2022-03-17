@@ -27,6 +27,7 @@ steps:
 - task: PublishPipelineArtifact@1
   displayName: 'Publikowanie pliku zip'
   inputs:
-    targetPath: '$(Pipeline.Workspace)'
+    # targetPath: '$(Pipeline.Workspace)'
+    targetPath: '$(build.artifactStagingDirectory)'
     artifact: 'drop'
     publishLocation: 'pipeline'
