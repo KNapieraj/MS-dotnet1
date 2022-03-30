@@ -32,4 +32,12 @@ steps:
     artifact: 'drop'
     publishLocation: 'pipeline'
 
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Azure subscription 1(4eb40c76-f45b-4d01-a668-19892bd67f3e)'
+    appType: 'webApp'
+    appName: 'MS-Sample-dotnet'
+    package: '$(System.DefaultWorkingDirectory)/**/drop.zip'
+    deploymentMethod: 'zipDeploy'
+
 # komentarz na probe
