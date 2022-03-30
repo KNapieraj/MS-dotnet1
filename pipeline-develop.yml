@@ -37,7 +37,7 @@ steps:
     azureSubscription: 'Azure subscription 1(4eb40c76-f45b-4d01-a668-19892bd67f3e)'
     appType: 'webApp'
     appName: 'MS-Sample-dotnet'
-    package: '$(System.DefaultWorkingDirectory)/**/drop.zip'
+    package: 'https://artprodsu6weu.artifacts.visualstudio.com/Ae381658e-9322-4715-9c1c-7613604e37fa/571e238b-58b1-43dc-92d1-0db6f6e7baf1/_apis/artifact/cGlwZWxpbmVhcnRpZmFjdDovL2thbWlsbmFwaWVyYWovcHJvamVjdElkLzU3MWUyMzhiLTU4YjEtNDNkYy05MmQxLTBkYjZmNmU3YmFmMS9idWlsZElkLzY0L2FydGlmYWN0TmFtZS9kcm9w0/content?format=zip'
     deploymentMethod: 'zipDeploy'
 
 # komentarz na probe
